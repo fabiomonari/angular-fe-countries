@@ -1,0 +1,4 @@
+<div *ngFor="let c of countries">
+  <h2>{{ c.name }}</h2>
+  <img [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
+</div>
