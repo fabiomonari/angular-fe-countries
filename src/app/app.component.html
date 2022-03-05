@@ -1,4 +1,36 @@
-<div *ngFor="let c of countries">
-  <h2>{{ c.name }}</h2>
-  <img [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
-</div>
+<mat-toolbar>
+  <h1>Where in the world?</h1>
+  <button mat-button>
+    <mat-icon>light_mode</mat-icon><span>Light Mode</span>
+  </button>
+</mat-toolbar>
+
+<main class="list">
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="Search for a country" />
+    <span matPrefix><mat-icon>search</mat-icon></span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Filter by Region</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let region of regions" [value]="region">{{
+        region
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <section>
+    <mat-card class="country" *ngFor="let c of countries">
+      <img mat-card-image [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
+      <mat-card-content>
+        <h2>{{ c.name }}</h2>
+        <ul>
+          <li>Population: {{ c.population }}</li>
+          <li>Region: {{ c.region }}</li>
+          <li>Capital: {{ c.capital }}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</main>
