@@ -13,7 +13,7 @@
 
   <mat-form-field>
     <mat-label>Filter by Region</mat-label>
-    <mat-select>
+    <mat-select [(value)]="selectedRegion">
       <mat-option *ngFor="let region of regions" [value]="region">{{
         region
       }}</mat-option>
@@ -21,16 +21,23 @@
   </mat-form-field>
 
   <section>
-    <mat-card class="country" *ngFor="let c of countries">
-      <img mat-card-image [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
-      <mat-card-content>
-        <h2>{{ c.name }}</h2>
-        <ul>
-          <li>Population: {{ c.population }}</li>
-          <li>Region: {{ c.region }}</li>
-          <li>Capital: {{ c.capital }}</li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
+    <ng-container *ngFor="let c of countries">
+      <mat-card
+        class="country"
+        *ngIf="
+          selectedRegion === 'all' || (c.region | lowercase) === selectedRegion
+        "
+      >
+        <img mat-card-image [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
+        <mat-card-content>
+          <h2>{{ c.name }}</h2>
+          <ul>
+            <li>Population: {{ c.population }}</li>
+            <li>Region: {{ c.region }}</li>
+            <li>Capital: {{ c.capital }}</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
   </section>
 </main>

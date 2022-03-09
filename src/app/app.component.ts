@@ -11,7 +11,15 @@ import { lastValueFrom } from 'rxjs';
 export class AppComponent implements OnInit {
   API_URL = 'https://restcountries.com/v2/all';
   countries: any = [];
-  regions: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
+  regions: string[] = [
+    'all',
+    'africa',
+    'americas',
+    'asia',
+    'europe',
+    'oceania',
+  ];
+  selectedRegion = 'all';
 
   constructor(
     private _httpClient: HttpClient,
