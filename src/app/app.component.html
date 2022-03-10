@@ -7,7 +7,12 @@
 
 <main class="list">
   <mat-form-field appearance="fill">
-    <input matInput placeholder="Search for a country" />
+    <input
+      matInput
+      placeholder="Search for a country"
+      [(ngModel)]="searchText"
+      autofocus
+    />
     <span matPrefix><mat-icon>search</mat-icon></span>
   </mat-form-field>
 
@@ -21,7 +26,7 @@
   </mat-form-field>
 
   <section>
-    <ng-container *ngFor="let c of countries">
+    <ng-container *ngFor="let c of countries | searchFilter: searchText">
       <mat-card
         class="country"
         *ngIf="

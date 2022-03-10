@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     'oceania',
   ];
   selectedRegion = 'all';
+  searchText = '';
 
   constructor(
     private _httpClient: HttpClient,
