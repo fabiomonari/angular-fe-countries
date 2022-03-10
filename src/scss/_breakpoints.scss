@@ -1,0 +1,16 @@
+$breakpoint-mobile: 375px; //mb
+$breakpoint-desktop: 1440px; //lg
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint==mb {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}

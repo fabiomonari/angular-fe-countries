@@ -1,0 +1,29 @@
+:host {
+  background-color: var(--color-background);
+}
+
+.mat-toolbar {
+  height: 100px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  justify-content: space-between;
+  background-color: var(--color-elements);
+  box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+}
+
+main {
+  margin-top: 100px;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-rows: max-content max-content 1fr;
+  grid-template-columns: 1fr;
+}
+
+.search-input {
+  margin-bottom: 50px;
+}
+
+.filter-select {
+}

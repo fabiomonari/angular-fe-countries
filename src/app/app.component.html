@@ -1,48 +1,39 @@
-<mat-toolbar>
+<div class="topbar">
   <h1>Where in the world?</h1>
   <button mat-button>
-    <mat-icon>light_mode</mat-icon><span>Light Mode</span>
+    <span>Light Mode</span>
   </button>
-</mat-toolbar>
+</div>
 
-<main class="list">
-  <mat-form-field appearance="fill">
-    <input
-      matInput
-      placeholder="Search for a country"
-      [(ngModel)]="searchText"
-      autofocus
-    />
-    <span matPrefix><mat-icon>search</mat-icon></span>
-  </mat-form-field>
+<main>
+  <input
+    placeholder="Search for a country"
+    [(ngModel)]="searchText"
+    autofocus
+  />
 
-  <mat-form-field>
-    <mat-label>Filter by Region</mat-label>
-    <mat-select [(value)]="selectedRegion">
-      <mat-option *ngFor="let region of regions" [value]="region">{{
-        region
-      }}</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <select [(ngModel)]="selectedRegion">
+    <option *ngFor="let region of regions" [value]="region">
+      {{ region }}
+    </option>
+  </select>
 
   <section>
     <ng-container *ngFor="let c of countries | searchFilter: searchText">
-      <mat-card
+      <div
         class="country"
         *ngIf="
           selectedRegion === 'all' || (c.region | lowercase) === selectedRegion
         "
       >
         <img mat-card-image [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
-        <mat-card-content>
-          <h2>{{ c.name }}</h2>
-          <ul>
-            <li>Population: {{ c.population }}</li>
-            <li>Region: {{ c.region }}</li>
-            <li>Capital: {{ c.capital }}</li>
-          </ul>
-        </mat-card-content>
-      </mat-card>
+        <h2>{{ c.name }}</h2>
+        <ul>
+          <li>Population: {{ c.population }}</li>
+          <li>Region: {{ c.region }}</li>
+          <li>Capital: {{ c.capital }}</li>
+        </ul>
+      </div>
     </ng-container>
   </section>
 </main>
