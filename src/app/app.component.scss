@@ -1,3 +1,5 @@
+@use "utils" as u;
+
 :host {
   background-color: var(--color-background);
   color: var(--color-text);
@@ -104,6 +106,26 @@ main {
         font-weight: 600;
         margin-right: 0.4rem;
       }
+    }
+  }
+}
+
+@include u.breakpoint(desktop) {
+  main {
+    padding: 4em 8rem;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: repeat(2fr);
+    grid-template-areas: "search filter" "list list";
+    gap: 7.5rem;
+
+    .input-field:first-child {
+      max-width: 60rem;
+    }
+
+    section:first-of-type {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8rem;
     }
   }
 }
