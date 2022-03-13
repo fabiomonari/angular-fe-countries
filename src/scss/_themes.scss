@@ -1,0 +1,20 @@
+// Default Light Theme
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-warn: hsl(340, 100%, 50%);
+  --color-elements: var(--color-white);
+  --color-background: hsl(0, 0%, 98%);
+  --color-text: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 52%);
+}
+
+// Dark Theme
+.dark {
+  --color-elements: hsl(209, 23%, 22%);
+  --color-background: hsl(207, 26%, 17%);
+  --color-text: var(--color-white);
+
+  .icon {
+    filter: invert(1);
+  }
+}

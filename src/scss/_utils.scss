@@ -14,3 +14,19 @@ $breakpoint-desktop: 1440px; //lg
     }
   }
 }
+
+@mixin formElements {
+  height: 4.8rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: var(--color-elements);
+  padding: 1rem;
+}
+
+@mixin fontDefault {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}

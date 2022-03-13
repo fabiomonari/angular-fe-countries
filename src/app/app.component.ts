@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 
 @Component({
@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
   ];
   selectedRegion = 'all';
   searchText = '';
+
+  @HostBinding('class') className = 'dark';
 
   constructor(private _httpClient: HttpClient) {}
 

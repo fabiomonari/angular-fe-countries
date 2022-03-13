@@ -1,18 +1,23 @@
 <div class="topbar">
   <h1>Where in the world?</h1>
   <button mat-button>
+    <img class="icon" src="../assets/icon-moon.svg" alt="Moon Icon" />
     <span>Light Mode</span>
   </button>
 </div>
 
 <main>
-  <input
-    placeholder="Search for a country"
-    [(ngModel)]="searchText"
-    autofocus
-  />
+  <div class="input-field">
+    <img class="icon" src="../assets/icon-search.svg" alt="Search Icon" />
+    <input
+      class="search"
+      placeholder="Search for a country..."
+      [(ngModel)]="searchText"
+      autofocus
+    />
+  </div>
 
-  <select [(ngModel)]="selectedRegion">
+  <select class="filter" title="regions" [(ngModel)]="selectedRegion">
     <option *ngFor="let region of regions" [value]="region">
       {{ region }}
     </option>
@@ -26,13 +31,18 @@
           selectedRegion === 'all' || (c.region | lowercase) === selectedRegion
         "
       >
-        <img mat-card-image [src]="c.flags.svg" alt="Flag of {{ c.name }}" />
-        <h2>{{ c.name }}</h2>
-        <ul>
-          <li>Population: {{ c.population }}</li>
-          <li>Region: {{ c.region }}</li>
-          <li>Capital: {{ c.capital }}</li>
-        </ul>
+        <div
+          class="img"
+          [ngStyle]="{ 'background-image': 'url(' + c.flags.svg + ')' }"
+        ></div>
+        <div class="description">
+          <h2>{{ c.name }}</h2>
+          <ul>
+            <li><span>Population:</span>{{ c.population }}</li>
+            <li><span>Region:</span>{{ c.region }}</li>
+            <li><span>Capital:</span>{{ c.capital }}</li>
+          </ul>
+        </div>
       </div>
     </ng-container>
   </section>
