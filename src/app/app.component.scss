@@ -23,7 +23,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
   background-color: var(--color-elements);
 
   h1 {
@@ -57,24 +56,30 @@ main {
   grid-template-columns: 1fr;
   grid-template-areas: "search" "filter" "list";
   gap: 4rem;
+}
 
-  .input-field:first-child {
-    grid-area: search;
-  }
+.search {
+  grid-area: search;
+}
 
-  .filter {
-    grid-area: filter;
-    min-width: 20rem;
-  }
+.filter {
+  grid-area: filter;
+  min-width: 20rem;
+}
 
-  section:first-of-type {
-    grid-area: list;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-  }
+.list {
+  grid-area: list;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.topbar,
+.search,
+.filter {
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
 }
 
 .country {
@@ -117,15 +122,15 @@ main {
     grid-template-columns: repeat(2fr);
     grid-template-areas: "search filter" "list list";
     gap: 7.5rem;
+  }
 
-    .input-field:first-child {
-      max-width: 60rem;
-    }
+  .search {
+    max-width: 60rem;
+  }
 
-    section:first-of-type {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 8rem;
-    }
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

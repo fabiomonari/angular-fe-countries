@@ -10,18 +10,11 @@ import { lastValueFrom } from 'rxjs';
 export class AppComponent implements OnInit {
   API_URL = 'https://restcountries.com/v2/all';
   countries: any = [];
-  regions: string[] = [
-    'all',
-    'africa',
-    'americas',
-    'asia',
-    'europe',
-    'oceania',
-  ];
+  regions: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
   selectedRegion = 'all';
   searchText = '';
 
-  @HostBinding('class') className = 'dark';
+  @HostBinding('class.dark') isDarkModeOn = true;
 
   constructor(private _httpClient: HttpClient) {}
 
@@ -46,5 +39,9 @@ export class AppComponent implements OnInit {
     //     JSON.stringify(err)
     //   );
     // });
+  }
+
+  changeMode() {
+    this.isDarkModeOn = !this.isDarkModeOn;
   }
 }
