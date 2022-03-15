@@ -8,9 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SelectComponent } from './common/select/select.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchFilterPipe, SelectComponent],
+  declarations: [
+    AppComponent,
+    SearchFilterPipe,
+    SelectComponent,
+    TopbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
