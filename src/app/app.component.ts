@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   API_URL = 'https://restcountries.com/v2/all';
   countries: any = [];
   regions: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
-  selectedRegion = 'all';
+  selectedRegion = '';
   searchText = '';
 
   @HostBinding('class.dark') isDarkModeOn = true;
@@ -43,5 +43,9 @@ export class AppComponent implements OnInit {
 
   changeMode() {
     this.isDarkModeOn = !this.isDarkModeOn;
+  }
+
+  selectRegion(region: string) {
+    this.selectedRegion = region;
   }
 }

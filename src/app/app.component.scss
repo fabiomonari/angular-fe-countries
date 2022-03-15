@@ -64,7 +64,6 @@ main {
 
 .filter {
   grid-area: filter;
-  min-width: 20rem;
 }
 
 .list {
@@ -79,7 +78,7 @@ main {
 .topbar,
 .search,
 .filter {
-  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+  box-shadow: u.$shadow;
 }
 
 .country {

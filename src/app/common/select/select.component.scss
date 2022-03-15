@@ -1,0 +1,45 @@
+@use "utils" as u;
+
+:host {
+  width: 20rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.selected,
+.dropdown {
+  @include u.formElements;
+  @include u.fontDefault;
+  display: flex;
+}
+
+.selected {
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  justify-content: space-between;
+
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+.dropdown {
+  padding: 1.6rem 0;
+  height: fit-content;
+  flex-direction: column;
+  margin-top: 0.8rem;
+  position: absolute;
+  width: 100%;
+  box-shadow: u.$shadow;
+
+  option {
+    padding: 0.8rem 2.4rem;
+  }
+
+  option:hover {
+    cursor: pointer;
+    background-color: var(--color-background);
+  }
+}

@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { SelectComponent } from './common/select/select.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchFilterPipe],
+  declarations: [AppComponent, SearchFilterPipe, SelectComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

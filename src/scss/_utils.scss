@@ -1,5 +1,6 @@
-$breakpoint-mobile: 375px; //mb
-$breakpoint-desktop: 1440px; //lg
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+$shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
 
 @mixin breakpoint($breakpoint) {
   @if $breakpoint==mobile {
