@@ -19,81 +19,11 @@ main {
   width: 100%;
   height: 100%;
   padding: 2.4rem 1.6rem;
-  overflow-y: auto;
-  display: grid;
-  grid-template-rows: max-content max-content 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas: "search" "filter" "list";
-  gap: 4rem;
-}
-
-.search {
-  grid-area: search;
-  box-shadow: u.$shadow;
-}
-
-.filter {
-  grid-area: filter;
-  box-shadow: u.$shadow;
-}
-
-.list {
-  grid-area: list;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 4rem;
-}
-
-.country {
-  width: 26rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  background-color: var(--color-elements);
-
-  .img {
-    width: 100%;
-    height: 16rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .description {
-    padding: 2.4rem;
-
-    h2 {
-      margin-bottom: 2.4rem;
-    }
-
-    ul {
-      list-style: none;
-      line-height: 2.4rem;
-
-      span {
-        font-weight: 600;
-        margin-right: 0.4rem;
-      }
-    }
-  }
+  overflow: auto;
 }
 
 @include u.breakpoint(desktop) {
   main {
     padding: 4em 8rem;
-    grid-template-rows: max-content 1fr;
-    grid-template-columns: repeat(2fr);
-    grid-template-areas: "search filter" "list list";
-    gap: 7.5rem;
-  }
-
-  .search {
-    max-width: 60rem;
-  }
-
-  .list {
-    justify-content: space-between;
   }
 }

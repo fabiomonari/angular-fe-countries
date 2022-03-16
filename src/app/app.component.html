@@ -1,43 +1,4 @@
 <app-topbar (changeModeEvent)="changeMode()"></app-topbar>
-
 <main>
-  <div class="search input-field">
-    <img class="icon" src="../assets/icon-search.svg" alt="Search Icon" />
-    <input
-      placeholder="Search for a country..."
-      [(ngModel)]="searchText"
-      autofocus
-    />
-  </div>
-
-  <app-select
-    class="filter"
-    placeholder="Filter by Region..."
-    [options]="regions"
-    (selectChange)="selectRegion($event)"
-  ></app-select>
-
-  <section class="list">
-    <ng-container *ngFor="let c of countries | searchFilter: searchText">
-      <div
-        class="country"
-        *ngIf="
-          selectedRegion === '' || selectedRegion === (c.region | lowercase)
-        "
-      >
-        <div
-          class="img"
-          [ngStyle]="{ 'background-image': 'url(' + c.flags.svg + ')' }"
-        ></div>
-        <div class="description">
-          <h2>{{ c.name }}</h2>
-          <ul>
-            <li><span>Population:</span>{{ c.population }}</li>
-            <li><span>Region:</span>{{ c.region }}</li>
-            <li><span>Capital:</span>{{ c.capital }}</li>
-          </ul>
-        </div>
-      </div>
-    </ng-container>
-  </section>
+  <router-outlet></router-outlet>
 </main>
