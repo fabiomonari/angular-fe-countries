@@ -30,32 +30,44 @@ body {
   font-size: 1.4rem;
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 800;
 }
 
-h2 {
+h3 {
   font-weight: 600;
 }
 
+// TODO: Create custom icon component. Use svg instead img.
 .icon {
   width: 1.6rem;
   height: 1.6rem;
 }
 
-input,
-button {
+input {
   @include u.formElements;
-  @include u.fontDefault;
 }
 
 button {
+  @include u.formElements;
+  box-shadow: u.$shadow;
   width: fit-content;
+  height: fit-content;
+  background-color: var(--color-elements);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    background-color: var(--color-background);
+  }
 }
 
 .input-field {
   @include u.formElements;
+  box-shadow: u.$shadow;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -63,9 +75,10 @@ button {
 
   input {
     width: 100%;
+    color: var(--color-input);
 
     &::placeholder {
-      color: var(--color-text);
+      color: var(--color-input);
       font-size: 1.2rem;
     }
   }

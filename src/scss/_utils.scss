@@ -16,6 +16,12 @@ $shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
   }
 }
 
+@mixin fontDefault {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
 @mixin formElements {
   height: 4.8rem;
   border-radius: 0.4rem;
@@ -24,10 +30,5 @@ $shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
   color: inherit;
   background-color: var(--color-elements);
   padding: 1rem;
-}
-
-@mixin fontDefault {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1.4rem;
+  @include fontDefault;
 }

@@ -12,12 +12,10 @@
 
 .search {
   grid-area: search;
-  box-shadow: u.$shadow;
 }
 
 .filter {
   grid-area: filter;
-  box-shadow: u.$shadow;
 }
 
 .list {
@@ -49,6 +47,7 @@
 
     h2 {
       margin-bottom: 2.4rem;
+      font-weight: 600;
     }
 
     ul {

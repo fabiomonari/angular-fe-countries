@@ -18,18 +18,8 @@ h1 {
 }
 
 button {
-  width: fit-content;
-  height: fit-content;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
-
-  &:hover {
-    background-color: var(--color-background);
-  }
 }
 
 @include u.breakpoint(desktop) {
@@ -42,6 +32,6 @@ button {
   }
 
   button {
-    font-size: 1.4rem;
+    font-size: unset;
   }
 }

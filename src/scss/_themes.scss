@@ -13,6 +13,7 @@
   --color-elements: hsl(209, 23%, 22%);
   --color-background: hsl(207, 26%, 17%);
   --color-text: var(--color-white);
+  --color-input: var(--color-text);
 
   .icon {
     filter: invert(1);
