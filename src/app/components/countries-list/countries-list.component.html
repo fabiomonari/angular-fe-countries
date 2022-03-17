@@ -19,6 +19,8 @@
     <div
       class="country"
       *ngIf="selectedRegion === '' || selectedRegion === (c.region | lowercase)"
+      routerLink="/country"
+      [routerLink]="['/country', c.alpha3Code | lowercase]"
     >
       <div
         class="img"

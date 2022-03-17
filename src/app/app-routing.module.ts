@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CountriesListComponent } from './components/countries-list/countries-list.component';
 import { CountryDetailsComponent } from './components/country-details/country-details.component';
 
-const routes: Routes = [
+const ROUTES: Routes = [
   { path: '', component: CountriesListComponent },
-  { path: 'country', component: CountryDetailsComponent },
+  { path: 'country/:id', component: CountryDetailsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
