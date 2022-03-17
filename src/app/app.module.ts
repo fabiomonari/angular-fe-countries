@@ -10,16 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { SelectComponent } from './components/common/select/select.component';
 import { CountryDetailsComponent } from './components/country-details/country-details.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
-import { MainComponent } from './components/main/main.component';
-
+import { CountriesListComponent } from './components/countries-list/countries-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     SearchFilterPipe,
     SelectComponent,
-    CountryDetailsComponent,
     TopbarComponent,
-    MainComponent,
+    CountryDetailsComponent,
+    CountriesListComponent,
   ],
   imports: [
     BrowserModule,

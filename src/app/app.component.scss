@@ -20,6 +20,20 @@ main {
   height: 100%;
   padding: 2.4rem 1.6rem;
   overflow: auto;
+  scroll-behavior: smooth;
+}
+
+button.scroll-top {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @include u.breakpoint(desktop) {

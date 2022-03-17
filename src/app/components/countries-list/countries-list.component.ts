@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  selector: 'app-countries-list',
+  templateUrl: './countries-list.component.html',
+  styleUrls: ['./countries-list.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class CountriesListComponent implements OnInit {
   countries: any = [];
   regions: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
   selectedRegion = '';
