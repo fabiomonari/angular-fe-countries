@@ -1,1 +1,33 @@
-<p>country-details works!</p>
+<button class="back" routerLink="/">
+  <img
+    class="icon"
+    src="../../../assets/icon-arrow-back.svg"
+    alt="Icon Arrow Back"
+  />
+  Back
+</button>
+<section class="country" *ngIf="isReady">
+  <div
+    class="img"
+    [ngStyle]="{ 'background-image': 'url(' + country.flags.svg + ')' }"
+  ></div>
+  <div class="description">
+    <h2>{{ country.name }}</h2>
+    <ul>
+      <li><span>Native Name:</span>{{ country.nativeName }}</li>
+      <li><span>Population:</span>{{ country.population }}</li>
+      <li><span>Region:</span>{{ country.region }}</li>
+      <li><span>Sub Region:</span>{{ country.subregion }}</li>
+      <li><span>Capital:</span>{{ country.capital }}</li>
+    </ul>
+    <ul>
+      <li><span>Top Level Domain:</span>{{ country.topLevelDomain }}</li>
+      <li><span>Currencies:</span>{{ country.currencies }}</li>
+      <li><span>Languages:</span>{{ country.languages }}</li>
+    </ul>
+  </div>
+  <div class="borders">
+    <h3>Border Countries</h3>
+    <button *ngFor="let c of country.borders">{{ c }}</button>
+  </div>
+</section>
