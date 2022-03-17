@@ -20,6 +20,7 @@ h1 {
 button {
   font-size: 1.2rem;
   font-weight: 600;
+  box-shadow: none;
 }
 
 @include u.breakpoint(desktop) {
