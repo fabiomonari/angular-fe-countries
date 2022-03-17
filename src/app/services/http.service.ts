@@ -6,16 +6,22 @@ import { lastValueFrom } from 'rxjs';
   providedIn: 'root',
 })
 export class HttpService {
-  API_URL = 'https://restcountries.com/v2/all';
+  API_URL = 'https://restcountries.com/v2/';
 
-  constructor(private _httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   async getCountries(): Promise<any> {
-    return await lastValueFrom(this._httpClient.get<any>(this.API_URL));
+    return await lastValueFrom(this.httpClient.get<any>(`${this.API_URL}/all`));
+  }
+
+  async getCountry(countryCode: string): Promise<any> {
+    return await lastValueFrom(
+      this.httpClient.get<any>(`${this.API_URL}/alpha/${countryCode}`)
+    );
   }
 
   // async getCountries(): Promise<any> {
-  //   await lastValueFrom(this._httpClient.get(this.API_URL));
+  //   await lastValueFrom(this.httpClient.get(this.API_URL));
 
   // .catch((err) => {
   //   this._snackBar.open('Erro loading data', 'OK', {
