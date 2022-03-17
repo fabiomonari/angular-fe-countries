@@ -30,9 +30,23 @@ button.back {
       line-height: 3.2rem;
       margin-bottom: 4rem;
 
-      span {
-        font-weight: 600;
-        margin-right: 0.4rem;
+      li span {
+        &:after {
+          content: ", ";
+        }
+
+        &:first-of-type {
+          font-weight: 600;
+          margin-right: 0.4rem;
+
+          &:after {
+            content: none;
+          }
+        }
+
+        &:last-of-type:after {
+          content: none;
+        }
       }
     }
   }
@@ -77,14 +91,6 @@ button.back {
 
       ul {
         grid-row: 2;
-        list-style: none;
-        line-height: 3.2rem;
-        margin-bottom: 4rem;
-
-        span {
-          font-weight: 600;
-          margin-right: 0.4rem;
-        }
       }
     }
 

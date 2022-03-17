@@ -22,8 +22,18 @@
     </ul>
     <ul>
       <li><span>Top Level Domain:</span>{{ country.topLevelDomain }}</li>
-      <li><span>Currencies:</span>{{ country.currencies }}</li>
-      <li><span>Languages:</span>{{ country.languages }}</li>
+      <li>
+        <span>Currencies:</span
+        ><span *ngFor="let currency of country.currencies">{{
+          currency.name
+        }}</span>
+      </li>
+      <li>
+        <span>Languages:</span
+        ><span *ngFor="let language of country.languages">{{
+          language.name
+        }}</span>
+      </li>
     </ul>
   </div>
   <div class="borders">
