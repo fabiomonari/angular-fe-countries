@@ -11,29 +11,27 @@ export class HttpService {
   constructor(private httpClient: HttpClient) {}
 
   async getCountries(): Promise<any> {
-    return await lastValueFrom(this.httpClient.get<any>(`${this.API_URL}/all`));
+    return await lastValueFrom(
+      this.httpClient.get<any>(`${this.API_URL}/all`)
+    ).catch((err) => {
+      this.error(err);
+    });
   }
 
-  async getCountry(countryCode: string): Promise<any> {
+  async getCountryById(countryCode: string): Promise<any> {
     return await lastValueFrom(
       this.httpClient.get<any>(`${this.API_URL}/alpha/${countryCode}`)
-    );
+    ).catch((err) => {
+      this.error(err);
+    });
   }
 
-  // async getCountries(): Promise<any> {
-  //   await lastValueFrom(this.httpClient.get(this.API_URL));
-
-  // .catch((err) => {
-  //   this._snackBar.open('Erro loading data', 'OK', {
-  //     verticalPosition: 'top',
-  //     horizontalPosition: 'right',
-  //     panelClass: 'snackbar-error',
-  //   });
-  //   console.log(
-  //     '%cPromise rejected with',
-  //     'background-color: red; color: white; border-radius: 2px; padding: 2px',
-  //     JSON.stringify(err)
-  //   );
-  // });
-  // }
+  error(err: any) {
+    alert(err);
+    console.log(
+      '%cPromise rejected with',
+      'background-color: red; color: white; border-radius: 2px; padding: 2px',
+      JSON.stringify(err)
+    );
+  }
 }
