@@ -27,17 +27,17 @@ Users should be able to:
 
 ## Screenshots
 
-### Desktop
+![List Mobile Dark](./design/list-mobile-dark.png)
+![List Mobile Light](./design/list-mobile-light.png)
+![Detail Mobile](./design/detail-mobile-dark.png)
 
 ![List Desktop Dark](./design/list-desktop-dark.png)
 ![List Desktop Light](./design/list-desktop-light.png)
-![List Mobile Dark](./design/list-mobile-dark.png)
-![List Mobile Light](./design/list-mobile-light.png)
-
-### Mobile
-
 ![Detail Desktop](./design/detail-desktop-dark.png)
-![Detail Mobile](./design/detail-mobile-dark.png)
+
+## Links
+
+-[Github Pages](https://fabiomonari.github.io/angular-fe-countries/) -[Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-rest-countries-api-list-Ux5LhnmRi)
 
 ## Built with
 
