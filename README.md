@@ -6,8 +6,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 - [The Challenge](#the-challenge)
 - [Screenshot](#screenshot)
-  - [Desktop](#desktop)
-  - [Mobile](#mobile)
+  - [List Page](#list-page)
+  - [Details Page](#details-page)
 - [Links](#links)
 - [Built with](#built-with)
 - [Continued development](#continued-development)
@@ -27,17 +27,22 @@ Users should be able to:
 
 ## Screenshots
 
-![List Mobile Dark](./design/list-mobile-dark.png)
-![List Mobile Light](./design/list-mobile-light.png)
-![Detail Mobile](./design/detail-mobile-dark.png)
+### List Page
 
-![List Desktop Dark](./design/list-desktop-dark.png)
-![List Desktop Light](./design/list-desktop-light.png)
-![Detail Desktop](./design/detail-desktop-dark.png)
+![List Mobile Light](./design/list-mobile-light.png)<br>
+![List Desktop Light](./design/list-desktop-light.png)<br>
+![List Mobile Dark](./design/list-mobile-dark.png)<br>
+![List Desktop Dark](./design/list-desktop-dark.png)<br>
+
+### Details Page
+
+![Detail Mobile](./design/detail-mobile-dark.png)<br>
+![Detail Desktop](./design/detail-desktop-dark.png)<br>
 
 ## Links
 
--[Github Pages](https://fabiomonari.github.io/angular-fe-countries/) -[Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-rest-countries-api-list-Ux5LhnmRi)
+- [Github Pages](https://fabiomonari.github.io/angular-fe-countries/)
+- [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-rest-countries-api-list-Ux5LhnmRi)
 
 ## Built with
 
@@ -51,9 +56,11 @@ Users should be able to:
 
 ## Continued development
 
-- Create an icon component;
-- Render svg directly with Angular Sanitizer;
-- Angular Animations
+- [x] Scroll To Top Button;
+- [x] Add user´s theme option to cache / local storage;
+- [ ] Create an icon component;
+- [ ] Render svg directly with Angular Sanitizer;
+- [ ] Angular Animations
 
 ## Author
 
