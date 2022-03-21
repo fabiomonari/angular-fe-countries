@@ -16,6 +16,7 @@
 
 .filter {
   grid-area: filter;
+  margin-left: auto;
 }
 
 .list {
@@ -66,9 +67,10 @@
 @include u.breakpoint(desktop) {
   :host {
     grid-template-rows: max-content 1fr;
-    grid-template-columns: repeat(2fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "search filter" "list list";
-    gap: 7.5rem;
+    column-gap: 7.5rem;
+    row-gap: 5rem;
   }
 
   .search {
