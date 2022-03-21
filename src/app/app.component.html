@@ -1,6 +1,8 @@
 <app-topbar (changeModeEvent)="changeMode($event)"></app-topbar>
 <main #main (scroll)="scrollCheck()">
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet class="content"></router-outlet>
+  </div>
 </main>
 <button class="scroll-top" *ngIf="showScrollButton" (click)="scrollToTop()">
   👆

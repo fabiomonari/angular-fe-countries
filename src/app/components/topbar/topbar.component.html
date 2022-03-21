@@ -1,11 +1,13 @@
-<h1 routerLink="/">Where in the world?</h1>
-<button mat-button (click)="changeMode()">
-  <ng-template [ngIf]="!isDarkModeOn" [ngIfElse]="lightMode">
-    <img class="icon" src="assets/icon-moon.svg" alt="Moon Icon" />
-    <span>Dark Mode</span>
-  </ng-template>
-  <ng-template #lightMode>
-    <img class="icon" src="assets/icon-sun.svg" alt="Sun Icon" />
-    <span>Light Mode</span>
-  </ng-template>
-</button>
+<div class="container">
+  <h1 routerLink="/">Where in the world?</h1>
+  <button mat-button (click)="changeMode()">
+    <ng-template [ngIf]="!isDarkModeOn" [ngIfElse]="lightMode">
+      <img class="icon" src="assets/icon-moon.svg" alt="Moon Icon" />
+      <span>Dark Mode</span>
+    </ng-template>
+    <ng-template #lightMode>
+      <img class="icon" src="assets/icon-sun.svg" alt="Sun Icon" />
+      <span>Light Mode</span>
+    </ng-template>
+  </button>
+</div>

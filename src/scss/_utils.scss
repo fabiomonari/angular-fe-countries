@@ -1,6 +1,5 @@
 $breakpoint-mobile: 375px;
 $breakpoint-desktop: 1440px;
-$breakpoint-ultra: 1920px;
 $shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
 
 @mixin breakpoint($breakpoint) {
@@ -12,12 +11,6 @@ $shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
 
   @if $breakpoint==desktop {
     @media only screen and (min-width: $breakpoint-desktop) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==ultra {
-    @media only screen and (min-width: $breakpoint-ultra) {
       @content;
     }
   }
