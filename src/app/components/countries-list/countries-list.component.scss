@@ -35,6 +35,11 @@
   border-radius: 0.4rem;
   background-color: var(--color-elements);
   box-shadow: u.$shadow;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   .img {
     width: 100%;
@@ -70,11 +75,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "search filter" "list list";
     column-gap: 7.5rem;
-    row-gap: 5rem;
+    row-gap: 4.5rem;
   }
 
   .search {
-    max-width: 60rem;
+    width: 75%;
+    max-width: 52rem;
   }
 
   .list {
