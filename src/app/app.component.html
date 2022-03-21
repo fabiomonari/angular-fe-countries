@@ -1,4 +1,4 @@
-<app-topbar (changeModeEvent)="changeMode()"></app-topbar>
+<app-topbar (changeModeEvent)="changeMode($event)"></app-topbar>
 <main #main (scroll)="scrollCheck()">
   <router-outlet></router-outlet>
 </main>

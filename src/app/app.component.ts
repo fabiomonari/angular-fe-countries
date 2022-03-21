@@ -1,4 +1,3 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, HostBinding, ViewChild } from '@angular/core';
 
 @Component({
@@ -7,15 +6,12 @@ import { Component, ElementRef, HostBinding, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @HostBinding('class.dark') isDarkModeOn = true;
-
   showScrollButton = false;
 
-  constructor() {}
-
+  @HostBinding('class.dark') isDarkModeOn = false;
   @ViewChild('main') element?: ElementRef;
 
-  scrollCheck() {
+  scrollCheck(): void {
     if (this.element) {
       if (this.element.nativeElement.scrollTop > 40) {
         this.showScrollButton = true;
@@ -25,7 +21,7 @@ export class AppComponent {
     }
   }
 
-  scrollToTop() {
+  scrollToTop(): void {
     if (this.element) {
       if (this.element.nativeElement.scrollTop > 0) {
         this.element.nativeElement.scrollTop = 0;
@@ -33,7 +29,8 @@ export class AppComponent {
       }
     }
   }
-  changeMode() {
-    this.isDarkModeOn = !this.isDarkModeOn;
+
+  changeMode(event: boolean): void {
+    this.isDarkModeOn = event;
   }
 }
