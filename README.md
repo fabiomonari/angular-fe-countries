@@ -47,6 +47,7 @@ Users should be able to:
 ## Built with
 
 - [Angular](https://angular.io/) - JS Framework
+- [REST Countries Free API - V2](https://restcountries.com/#api-endpoints-v2)
 - Semantic HTML5 markup
 - CSS custom properties and variables
 - Flexbox
@@ -63,6 +64,8 @@ Users should be able to:
 - [ ] Angular Animations
 
 ## Author
+
+Fábio Monari - Designer & Front-End Developer
 
 - Website - [fabiomonari.com](https://fabiomonari.com)
 - Github Profile - [@fabiomonari](https://github.com/fabiomonari)
